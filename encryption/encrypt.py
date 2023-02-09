@@ -1,5 +1,5 @@
-import os
 from dotenv import load_dotenv
+import os
 
 
 def encrypt(text: str, key: int) -> str:
@@ -11,17 +11,18 @@ def encrypt(text: str, key: int) -> str:
 
 
 def _main():
-    # read your secret encryption key from the .env file
     load_dotenv()
+    # read your secret encryption key from the .env file
+    k = os.getenv("CIPHER_KEY")
+    print(type(k))
     # read from encrypt_input.txt
-    key = os.getenv("Secret_Key")
-    print(type(key))
-    # call encrypt on each line with your key
     with open("./encryption/encrypt_input.txt") as input:
         print(input.readlines())
-    # write the encrypted lines to encrypt_output.txt
-    with open("./encryption/encrypt_input.txt", "w") as output:
+    # call encrypt on each line with your key
+    # write the encrypted lines to encrypt_output.txtc
+    with open("./encryption/encrypt_output.txt", "w") as output:
         output.write("TEST")
+   
 
 
 if __name__ == "__main__":
