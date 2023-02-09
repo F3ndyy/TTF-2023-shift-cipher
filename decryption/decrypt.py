@@ -1,4 +1,3 @@
-
 def decrypt(text: str, key: int) -> str:
     """Applies a shift cipher (also known as Caesar cipher) to the input text,
     by rotating it RIGHT of key number of positions.
