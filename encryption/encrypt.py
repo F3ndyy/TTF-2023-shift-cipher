@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 
+
 def encrypt(text: str, key: int) -> str:
     """Applies a shift cipher (also known as Caesar cipher) to the input text,
     by rotating it LEFT of key number of positions.
