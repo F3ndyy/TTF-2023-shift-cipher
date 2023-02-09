@@ -18,10 +18,9 @@ def _main():
     print(type(key))
     # call encrypt on each line with your key
     with open("./encryption/encrypt_input.txt") as input:
-        text = input.readlines()
-        print(text)
+        print(input.readlines())
     # write the encrypted lines to encrypt_output.txt
-    with open("./encryption/encrypt_input.txt") as output:
+    with open("./encryption/encrypt_input.txt", "w") as output:
         output.write("TEST")
 
 
